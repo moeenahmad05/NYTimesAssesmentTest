@@ -10,7 +10,7 @@
         <!--NY Times Articles-->
         <scene sceneID="LBO-VM-Y2f">
             <objects>
-                <viewController id="F70-uP-8tq" customClass="ArticlesMasterViewController" customModule="NYTimesTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="F70-uP-8tq" customClass="ArticlesMasterViewController" customModule="NYTimesMoeen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eTZ-fD-XtN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,13 +34,29 @@
                         <viewLayoutGuide key="safeArea" id="Q9k-iL-8S9"/>
                     </view>
                     <navigationItem key="navigationItem" title="NY Times Articles" id="ojZ-jI-LF9">
-                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="JvZ-gb-PXk">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wrw-l6-lKb">
-                                <rect key="frame" x="20" y="6" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" width="20" style="plain" id="JvZ-gb-PXk">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wrw-l6-lKb">
+                                <rect key="frame" x="20" y="0.0" width="64" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="menu"/>
                             </button>
                         </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="Los-6l-OQf">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="L5X-0E-UwM">
+                                    <rect key="frame" x="362" y="6" width="32" height="32"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="more"/>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="Q3H-3Y-DXQ">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nAN-Zt-1kT">
+                                    <rect key="frame" x="322" y="6" width="32" height="32"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="search"/>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="zk7-MS-fKq" id="WbI-5C-y7f"/>
@@ -49,18 +65,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fu3-kv-qBD" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953" y="90"/>
+            <point key="canvasLocation" x="952.17391304347836" y="89.732142857142847"/>
         </scene>
         <!--Article Details View Controller-->
         <scene sceneID="ycf-Oo-DfZ">
             <objects>
-                <viewController id="qg0-fg-zOf" customClass="ArticleDetailsViewController" customModule="NYTimesTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qg0-fg-zOf" customClass="ArticleDetailsViewController" customModule="NYTimesMoeen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X2C-j4-5iN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0aJ-BT-SV2">
-                                <rect key="frame" x="28" y="101" width="358" height="296.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="0aJ-BT-SV2">
+                                <rect key="frame" x="28" y="101" width="358" height="336.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lz9-cE-H4D">
                                         <rect key="frame" x="19.5" y="0.0" width="319" height="212.5"/>
@@ -70,14 +86,14 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" restorationIdentifier="DetailsArticleTitle" text="Article Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBP-sT-zcC">
-                                        <rect key="frame" x="111" y="227.5" width="136" height="33.5"/>
+                                        <rect key="frame" x="111" y="247.5" width="136" height="33.5"/>
                                         <accessibility key="accessibilityConfiguration" identifier="DetailsArticleTitle"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Article Abstract" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpR-fS-4Sz">
-                                        <rect key="frame" x="119.5" y="276" width="119.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="Article Abstract" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpR-fS-4Sz">
+                                        <rect key="frame" x="119.5" y="316" width="119.5" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -102,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTs-Ld-5ZK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1740" y="90"/>
+            <point key="canvasLocation" x="1739.1304347826087" y="89.732142857142847"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MfP-Tl-1gA">
@@ -112,8 +128,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rqR-ZH-mYl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.20575595390708792" green="0.61493703193470917" blue="0.57257558137776954" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
@@ -129,5 +147,7 @@
     </scenes>
     <resources>
         <image name="menu" width="32" height="32"/>
+        <image name="more" width="32" height="32"/>
+        <image name="search" width="32" height="32"/>
     </resources>
 </document>
